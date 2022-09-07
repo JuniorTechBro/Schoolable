@@ -1,0 +1,52 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 400;
+  src: url(../Assets/fonts/TTF/WorkSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 500;
+  src: url(../Assets/fonts/TTF/WorkSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 600;
+  src: url(../Assets/fonts/TTF/WorkSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 700;
+  src: url(../Assets/fonts/TTF/WorkSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 600;
+  src: url(../Assets/fonts/static/PlusJakartaSans-SemiBold.ttf);
+}
+
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  src: url(../Assets/fonts/static/PlusJakartaSans-Bold.ttf);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans";
+}
