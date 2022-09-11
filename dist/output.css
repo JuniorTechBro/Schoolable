@@ -551,9 +551,17 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .sticky {
   position: -webkit-sticky;
   position: sticky;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .mx-auto {
@@ -613,6 +621,10 @@ video {
   margin-top: auto;
 }
 
+.mb-\[4px\] {
+  margin-bottom: 4px;
+}
+
 .block {
   display: block;
 }
@@ -629,8 +641,8 @@ video {
   display: none;
 }
 
-.h-\[3\.5px\] {
-  height: 3.5px;
+.h-\[3px\] {
+  height: 3px;
 }
 
 .h-\[100\%\] {
@@ -802,9 +814,9 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-gray-900 {
+.bg-grey {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  background-color: rgb(129 129 129 / var(--tw-bg-opacity));
 }
 
 .bg-mainBlue {
@@ -913,6 +925,11 @@ video {
   line-height: 2.5rem;
 }
 
+.text-grey {
+  --tw-text-opacity: 1;
+  color: rgb(129 129 129 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -926,11 +943,6 @@ video {
 .text-purple {
   --tw-text-opacity: 1;
   color: rgb(37 31 104 / var(--tw-text-opacity));
-}
-
-.text-grey {
-  --tw-text-opacity: 1;
-  color: rgb(129 129 129 / var(--tw-text-opacity));
 }
 
 .shadow-\[0px_4px_12px_rgba\(0\2c 0\2c 0\2c 0\.05\)\] {
@@ -995,6 +1007,50 @@ video {
 
 body {
   font-family: "Work Sans";
+  scroll-behavior: smooth;
+}
+
+@media (max-width:976px) {
+  #backdrop {
+    top: 110px;
+    position: fixed;
+    /* display: none; */
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    left: 0;
+    right:0;
+    background-image: linear-gradient(black, rgb(0, 0, 0, 0.1));
+  }
+
+  #nav-links {
+    position:fixed;
+    background-color: white;
+    flex-direction: column;
+    gap:50px;
+    top: 150px;
+    left: 0px;
+    right: 0px;
+    /* transform: translate(-50%); */
+    width: auto;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    padding-inline: 40px;
+    z-index: 100000;
+  }
+}
+
+#nav-links {
+  display: none;
+}
+
+#nav-links.visible {
+  display: flex;
+  -webkit-animation: slide-in 0.3s ease-out forwards;
+          animation: slide-in 0.3s ease-out forwards;
 }
 
 @media (min-width: 480px) {
